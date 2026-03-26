@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Minimal Resume — WebStart Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  body { margin: 0; background: #eef0f3; font-family: 'IBM Plex Sans', sans-serif; color: #18202e; }
+  .page { max-width: 720px; margin: 40px auto; background: #fff; box-shadow: 0 2px 24px rgba(0,0,0,0.07); padding: 56px 64px; }
+  .top { border-bottom: 2px solid #18202e; padding-bottom: 28px; margin-bottom: 36px; display: flex; justify-content: space-between; align-items: flex-end; }
+  .name-block h1 { font-family: 'IBM Plex Mono', monospace; font-size: 32px; font-weight: 500; letter-spacing: -0.5px; margin-bottom: 5px; color: #18202e; }
+  .name-block .role { font-size: 14px; color: #5a6a85; font-weight: 400; font-family: 'IBM Plex Mono', monospace; }
+  .contact-block { text-align: right; }
+  .contact-block a, .contact-block div { font-size: 12.5px; color: #5a6a85; font-family: 'IBM Plex Mono', monospace; line-height: 1.85; display: block; text-decoration: none; }
+  .section { margin-bottom: 34px; }
+  .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+  .section-label { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase; color: #18202e; }
+  .section-line { flex: 1; height: 1px; background: #d8dce6; }
+  .entry { display: grid; grid-template-columns: 130px 1fr; gap: 0 24px; margin-bottom: 22px; }
+  .entry-meta { }
+  .entry-date { font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: #8a96aa; line-height: 1.5; }
+  .entry-company { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #4a7ce8; margin-top: 4px; }
+  .entry-content { }
+  .entry-title { font-size: 15px; font-weight: 600; color: #18202e; margin-bottom: 6px; }
+  .entry-text { font-size: 13.5px; color: #3a4a60; line-height: 1.7; }
+  .entry-text ul { padding-left: 16px; margin: 6px 0 0; }
+  .entry-text li { margin-bottom: 4px; }
+  .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 32px; }
+  .skill-group { }
+  .skill-group-name { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a96aa; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 7px; }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+  .skill-tag { font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: #18202e; background: #f0f2f6; padding: 3px 9px; border-radius: 3px; border: 1px solid #d8dce6; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 40px; }
+  .edu-item .edu-degree { font-size: 14.5px; font-weight: 600; color: #18202e; margin-bottom: 3px; }
+  .edu-item .edu-school { font-size: 13px; color: #4a7ce8; font-family: 'IBM Plex Mono', monospace; font-size: 12px; }
+  .edu-item .edu-year { font-size: 11.5px; color: #8a96aa; font-family: 'IBM Plex Mono', monospace; margin-top: 2px; }
+  .cert-item { font-size: 13px; color: #3a4a60; line-height: 1.8; }
+  .cert-item span { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8a96aa; display: block; }
+  .summary-text { font-size: 14px; color: #3a4a60; line-height: 1.8; }
+  .lang-row { display: flex; justify-content: space-between; font-size: 13px; color: #3a4a60; border-bottom: 1px solid #f0f2f6; padding: 7px 0; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; }
+  .lang-row .level { color: #4a7ce8; }
+  .watermark { text-align: center; padding: 20px 0 0; font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; color: #b0b8cc; letter-spacing: 2px; border-top: 1px solid #eef0f3; margin-top: 20px; }
+  @media print { body { background: #fff; } .page { box-shadow: none; margin: 0; padding: 40px; } }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="top">
+    <div class="name-block">
+      <h1>Дмитро Савченко</h1>
+      <div class="role">// Backend Engineer</div>
+    </div>
+    <div class="contact-block">
+      <div>d.savchenko@dev.ua</div>
+      <div>+38 (063) 456-78-90</div>
+      <div>github.com/dsavchenko</div>
+      <div>Харків / Remote</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="section-label">Summary</span>
+      <div class="section-line"></div>
+    </div>
+    <p class="summary-text">Backend-розробник з 5 роками досвіду проектування та підтримки високонавантажених систем. Спеціалізуюся на Node.js, Python та cloud-інфраструктурі. Перевагу надаю чистому коду, тестуванню та документуванню. Відкритий до remote-позицій.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="section-label">Experience</span>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-meta">
+        <div class="entry-date">2022 —<br/>дотепер</div>
+        <div class="entry-company">DataFlow Inc.</div>
+      </div>
+      <div class="entry-content">
+        <div class="entry-title">Senior Backend Engineer</div>
+        <div class="entry-text">
+          <ul>
+            <li>Проектував мікросервісну архітектуру для обробки 50k+ RPS</li>
+            <li>Скоротив час відповіді API на 60% через Redis-кешування</li>
+            <li>Впровадив CI/CD pipeline з 0 downtime deployments</li>
+            <li>Менторив 3 junior-розробників</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-meta">
+        <div class="entry-date">2020 —<br/>2022</div>
+        <div class="entry-company">TechStart UA</div>
+      </div>
+      <div class="entry-content">
+        <div class="entry-title">Backend Developer</div>
+        <div class="entry-text">
+          <ul>
+            <li>Розробляв REST та GraphQL API для SaaS-платформи</li>
+            <li>Інтегрував платіжні системи (Stripe, LiqPay)</li>
+            <li>Покрив кодову базу тестами на 85%</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-meta">
+        <div class="entry-date">2019 —<br/>2020</div>
+        <div class="entry-company">Freelance</div>
+      </div>
+      <div class="entry-content">
+        <div class="entry-title">Junior Node.js Developer</div>
+        <div class="entry-text">Розробляв backend для e-commerce проектів. Інтеграції з третіми сторонами, адмін-панелі, email-сервіси.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="section-label">Skills</span>
+      <div class="section-line"></div>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <div class="skill-group-name">Languages</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">TypeScript</span>
+          <span class="skill-tag">Go</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-name">Databases</div>
+        <div class="skill-tags">
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">MongoDB</span>
+          <span class="skill-tag">Redis</span>
+          <span class="skill-tag">MySQL</span>
+        </div>
+      </div>
+      <div class="skill-group" style="margin-top:12px">
+        <div class="skill-group-name">Infrastructure</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">K8s</span>
+          <span class="skill-tag">AWS</span>
+          <span class="skill-tag">GitHub CI</span>
+        </div>
+      </div>
+      <div class="skill-group" style="margin-top:12px">
+        <div class="skill-group-name">Practices</div>
+        <div class="skill-tags">
+          <span class="skill-tag">REST</span>
+          <span class="skill-tag">GraphQL</span>
+          <span class="skill-tag">TDD</span>
+          <span class="skill-tag">Agile</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="section-label">Education & Certs</span>
+      <div class="section-line"></div>
+    </div>
+    <div class="two-col">
+      <div class="edu-item">
+        <div class="edu-degree">Бакалавр, Комп'ютерні науки</div>
+        <div class="edu-school">ХНУРЕ, Харків</div>
+        <div class="edu-year">2015 — 2019</div>
+      </div>
+      <div>
+        <div class="cert-item">AWS Certified Developer <span>Amazon, 2023</span></div>
+        <div class="cert-item">Node.js Application Dev. <span>OpenJS Foundation, 2022</span></div>
+        <div class="cert-item">Docker & Kubernetes <span>Linux Foundation, 2021</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <span class="section-label">Languages</span>
+      <div class="section-line"></div>
+    </div>
+    <div style="max-width: 340px;">
+      <div class="lang-row"><span>Українська</span><span class="level">Native</span></div>
+      <div class="lang-row"><span>Англійська</span><span class="level">B2 — Upper Intermediate</span></div>
+      <div class="lang-row"><span>Польська</span><span class="level">A2 — Elementary</span></div>
+    </div>
+  </div>
+
+  <div class="watermark">WEBSTART STUDIO — resume templates</div>
+</div>
+</body>
+</html>
